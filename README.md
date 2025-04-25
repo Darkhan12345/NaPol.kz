@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="ru" id="html-lang">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Купить ламинат, SPC, плинтуса и подложки в Казахстане. Бесплатная доставка, бесплатный замер, экологичные покрытия.">
+  <meta name="keywords" content="ламинат Алматы, SPC Астана, плинтус Казахстан, подложка недорого, бесплатный замер">
+  <title>NaPol.kz — Напольные покрытия в Казахстане</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .hero-bg {
+      background-image: url('https://images.unsplash.com/photo-1618220922940-7cc2f2e9e968?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+    }
+    .logo-placeholder {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #2F855A;
+    }
+    .lang-btn {
+      padding: 0.2rem 0.5rem;
+      border: 1px solid #2F855A;
+      border-radius: 0.25rem;
+      color: #2F855A;
+      font-size: 0.75rem;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background-color: #2F855A;
+      color: white;
+    }
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      color: #4B5563;
+      font-size: 0.75rem;
+      transition: color 0.2s;
+    }
+    .contact-info a:hover {
+      color: #2F855A;
+    }
+    .header-cta {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.75rem;
+      background-color: #2F855A;
+      color: white;
+      border-radius: 0.25rem;
+      transition: background-color 0.2s;
+    }
+    .header-cta:hover {
+      background-color: #1F6140;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .category-btn {
+      padding: 0.5rem 1rem;
+      border: 1px solid #D1D5DB;
+      border-radius: 0.25rem;
+      background-color: #F3F4F6;
+      color: #374151;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    .category-btn.active, .category-btn:hover {
+      background-color: #2F855A;
+      color: white;
+      border-color: #2F855A;
+    }
+    .custom-focus-ring:focus {
+      outline: none;
+      ring: 2px;
+      ring-color: #2F855A;
+    }
+    .custom-hover-text:hover {
+      color: #2F855A;
+    }
+    .price-text {
+      color: #2F855A;
+    }
+    .custom-bg {
+      background-color: #2F855A;
+    }
+    .custom-bg-hover:hover {
+      background-color: #1F6140;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #1E3A8A;
+      line-height: 1.2;
+    }
+    .hero-subtitle {
+      font-size: 1.125rem;
+      color: #1E3A8A;
+      margin-top: 0.5rem;
+    }
+    .hero-cta-primary {
+      background-color: #F97316;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+    }
+    .hero-cta-primary:hover {
+      background-color: #EA580C;
+    }
+    .hero-cta-secondary {
+      background-color: white;
+      color: #1E3A8A;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      border: 2px solid #1E3A8A;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .hero-cta-secondary:hover {
+      background-color: #1E3A8A;
+      color: white;
+    }
+    .benefit-item {
+      display: flex;
+      align-items: center;
+      color: #1E3A8A;
+      margin-bottom: 0.5rem;
+      font-size: 0.875rem;
+    }
+    .benefit-item i {
+      margin-right: 0.5rem;
+      color: #1E3A8A;
+    }
+    @media (max-width: 640px) {
+      .hero-bg {
+        min-height: 400px;
+      }
+      .hero-title {
+        font-size: 1.5rem;
+      }
+      .hero-subtitle {
+        font-size: 0.875rem;
+      }
+      .hero-cta-primary, .hero-cta-secondary {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+      }
+      .benefit-item {
+        font-size: 0.75rem;
+      }
+      .contact-info {
+        display: none;
+      }
+      .nav-links {
+        display: none;
+      }
+      .header-cta {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+      }
+      .lang-btn {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.4rem;
+      }
+      .category-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+      }
+    }
+    @media (min-width: 641px) {
+      .mobile-menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-3 header-container">
+      <a href="/" class="text-xl sm:text-2xl logo-placeholder">NaPol.kz</a>
+      <div class="nav-links hidden sm:flex space-x-4">
+        <a href="#catalog" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-catalog">Каталог</a>
+        <a href="#brands" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-brands">Бренды</a>
+        <a href="#services" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-services">Услуги</a>
+        <a href="#about" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-about">О нас</a>
+        <a href="#contact" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-contact">Контакты</a>
+      </div>
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <div class="contact-info hidden sm:flex space-x-3">
+          <a href="mailto:info@napol.kz"><i class="fas fa-envelope mr-1 text-xs"></i><span>info@napol.kz</span></a>
+          <a href="tel:+77712345678"><i class="fas fa-phone-alt mr-1 text-xs"></i><span>+7 (771) 234-56-78</span></a>
+        </div>
+        <div class="flex space-x-1">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="kk">KZ</button>
+        </div>
+        <a href="https://wa.me/+77712345678" class="text-[#2F855A]"><i class="fab fa-whatsapp text-lg"></i></a>
+        <a href="#contact" class="header-cta" data-lang-key="hero-calculate">Рассчитать стоимость</a>
+        <button id="menu-toggle" class="mobile-menu-toggle sm:hidden text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden sm:hidden bg-white shadow">
+      <div class="px-4 py-2 contact-info flex flex-col space-y-2">
+        <a href="mailto:info@napol.kz" class="text-gray-700"><i class="fas fa-envelope mr-1 text-xs"></i><span>info@napol.kz</span></a>
+        <a href="tel:+77712345678" class="text-gray-700"><i class="fas fa-phone-alt mr-1 text-xs"></i><span>+7 (771) 234-56-78</span></a>
+      </div>
+      <a href="#catalog" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-catalog">Каталог</a>
+      <a href="#brands" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-brands">Бренды</a>
+      <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-services">Услуги</a>
+      <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-about">О нас</a>
+      <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-contact">Контакты</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="hero-title mb-4" data-lang-key="hero-title">Пол, который вы полюбите с первого взгляда</h1>
+      <p class="hero-subtitle mb-6" data-lang-key="hero-subtitle">Ламинат, SPC, паркет и ковры с доставкой по всему Казахстану. Выгодно. Удобно. В рассрочку.</p>
+      <div class="flex space-x-4 mb-6">
+        <a href="#catalog" class="hero-cta-primary" data-lang-key="hero-cta-primary">Выбрать покрытие</a>
+        <a href="#contact" class="hero-cta-secondary" data-lang-key="hero-cta-secondary">Получить консультацию</a>
+      </div>
+      <div class="space-y-2">
+        <div class="benefit-item" data-lang-key="benefit-delivery">
+          <i class="fas fa-truck"></i> Бесплатная доставка от 100.000 ₸
+        </div>
+        <div class="benefit-item" data-lang-key="benefit-selection">
+          <i class="fas fa-hand-pointer"></i> Помощь с подбором
+        </div>
+        <div class="benefit-item" data-lang-key="benefit-payment">
+          <i class="fas fa-credit-card"></i> Оплата через Kaspi и Halyk
+        </div>
+        <div class="benefit-item" data-lang-key="benefit-installment">
+          <i class="fas fa-star"></i> Рассрочка без переплат
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catalog Section -->
+  <section id="catalog" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="catalog-title">Наш каталог</h2>
+      <div class="flex flex-wrap justify-center gap-2 mb-6">
+        <button class="category-btn active" data-category="all" data-lang-key="filter-all">Все</button>
+        <button class="category-btn" data-category="laminate" data-lang-key="filter-laminate">Ламинат</button>
+        <button class="category-btn" data-category="spc" data-lang-key="filter-spc">SPC</button>
+        <button class="category-btn" data-category="plinth" data-lang-key="filter-plinth">Плинтуса</button>
+        <button class="category-btn" data-category="underlay" data-lang-key="filter-underlay">Подложки</button>
+      </div>
+      <div class="flex flex-wrap justify-center gap-4 mb-8">
+        <div class="flex flex-col">
+          <label for="filter-strength" class="text-sm font-semibold mb-1" data-lang-key="filter-strength-label">Класс прочности</label>
+          <select id="filter-strength" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
+            <option value="all" data-lang-key="filter-all">Все</option>
+            <option value="32">32 класс</option>
+            <option value="33">33 класс</option>
+            <option value="34">34 класс</option>
+            <option value="na" data-lang-key="filter-na">Не применимо</option>
+          </select>
+        </div>
+        <div class="flex flex-col">
+          <label for="filter-brand" class="text-sm font-semibold mb-1" data-lang-key="filter-brand-label">Бренд</label>
+          <select id="filter-brand" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
+            <option value="all" data-lang-key="filter-all">Все</option>
+            <option value="vinart">Vinart</option>
+          </select>
+        </div>
+        <div class="flex flex-col">
+          <label for="filter-thickness" class="text-sm font-semibold mb-1" data-lang-key="filter-thickness-label">Толщина</label>
+          <select id="filter-thickness" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
+            <option value="all" data-lang-key="filter-all">Все</option>
+            <option value="2">2 мм</option>
+            <option value="3">3 мм</option>
+            <option value="4.5">4.5 мм</option>
+            <option value="5">5 мм</option>
+            <option value="7">7 мм</option>
+            <option value="8">8 мм</option>
+            <option value="60">60 мм</option>
+            <option value="80">80 мм</option>
+          </select>
+        </div>
+        <div class="flex flex-col">
+          <label for="filter-pattern" class="text-sm font-semibold mb-1" data-lang-key="filter-pattern-label">Узор</label>
+          <select id="filter-pattern" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
+            <option value="all" data-lang-key="filter-all">Все</option>
+            <option value="wood" data-lang-key="filter-pattern-wood">Дерево</option>
+            <option value="stone" data-lang-key="filter-pattern-stone">Камень</option>
+            <option value="solid" data-lang-key="filter-pattern-solid">Однотонный</option>
+            <option value="white" data-lang-key="filter-pattern-white">Белый</option>
+            <option value="oak" data-lang-key="filter-pattern-oak">Дуб</option>
+          </select>
+        </div>
+        <button id="reset-filters" class="px-4 py-2 border rounded-lg text-gray-700 custom-bg-hover self-end" data-lang-key="reset-filters">Сбросить</button>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="laminate" data-strength-class="33" data-brand="vinart" data-thickness="8" data-pattern="wood">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ламинат Vinart 33 класс в Алматы" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Ламинат Vinart Classic</h3>
+            <p class="text-gray-600">33 класс, 8 мм, водостойкий, дуб натуральный</p>
+            <p class="price-text font-bold">от 6,500 KZT/м²</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="laminate" data-strength-class="32" data-brand="vinart" data-thickness="7" data-pattern="wood">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ламинат Vinart Premium в Астане" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Ламинат Vinart Premium</h3>
+            <p class="text-gray-600">32 класс, 7 мм, влагостойкий, серый орех</p>
+            <p class="price-text font-bold">от 5,800 KZT/м²</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="spc" data-strength-class="34" data-brand="vinart" data-thickness="4.5" data-pattern="stone">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="SPC Vinart Stone в Казахстане" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">SPC Vinart Stone</h3>
+            <p class="text-gray-600">4.5 мм, водостойкий, каменный эффект</p>
+            <p class="price-text font-bold">от 8,500 KZT/м²</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="spc" data-strength-class="34" data-brand="vinart" data-thickness="5" data-pattern="wood">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="SPC Vinart Wood в Шымкенте" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">SPC Vinart Wood</h3>
+            <p class="text-gray-600">5 мм, экологичный, текстура дерева</p>
+            <p class="price-text font-bold">от 9,200 KZT/м²</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="plinth" data-strength-class="na" data-brand="vinart" data-thickness="60" data-pattern="white">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Плинтус Vinart ПВХ в Алматы" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Плинтус Vinart ПВХ</h3>
+            <p class="text-gray-600">60 мм, белый, устойчив к влаге</p>
+            <p class="price-text font-bold">от 1,200 KZT/пог.м</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="plinth" data-strength-class="na" data-brand="vinart" data-thickness="80" data-pattern="oak">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Плинтус Vinart МДФ в Астане" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Плинтус Vinart МДФ</h3>
+            <p class="text-gray-600">80 мм, дуб, для сухих помещений</p>
+            <p class="price-text font-bold">от 1,500 KZT/пог.м</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="underlay" data-strength-class="na" data-brand="vinart" data-thickness="2" data-pattern="solid">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Подложка Vinart EVA в Казахстане" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Подложка Vinart EVA</h3>
+            <p class="text-gray-600">2 мм, для ламината, шумопоглощение</p>
+            <p class="price-text font-bold">от 600 KZT/м²</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="underlay" data-strength-class="na" data-brand="vinart" data-thickness="3" data-pattern="solid">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Подложка Vinart XPS в Алматы" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold">Подложка Vinart XPS</h3>
+            <p class="text-gray-600">3 мм, для SPC, теплоизоляция</p>
+            <p class="price-text font-bold">от 800 KZT/м²</p>
+            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USP Section -->
+  <section class="py-16 bg-gray-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="usp-title">Почему выбирают нас</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <i class="fas fa-truck text-4xl text-[#2F855A] mb-4"></i>
+          <h3 class="text-xl font-semibold" data-lang-key="usp-delivery-title">Бесплатная доставка</h3>
+          <p class="text-gray-600" data-lang-key="usp-delivery-text">По всему Казахстану при заказе от 100,000 KZT</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-leaf text-4xl text-[#2F855A] mb-4"></i>
+          <h3 class="text-xl font-semibold" data-lang-key="usp-materials-title">Экологичные материалы</h3>
+          <p class="text-gray-600" data-lang-key="usp-materials-text">Сертификаты E0 и E1 для вашего здоровья</p>
+        </div>
+        <div class="text-center">
+          <i class="fas fa-ruler-combined text-4xl text-[#2F855A] mb-4"></i>
+          <h3 class="text-xl font-semibold" data-lang-key="usp-measurement-title">Бесплатный замер</h3>
+          <p class="text-gray-600" data-lang-key="usp-measurement-text">С расчетом материалов в Алматы и Астане</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="reviews-title">Отзывы наших клиентов</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="До ремонта пола в Астане" class="w-full h-48 object-cover rounded-lg">
+              <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-before">До</p>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="После укладки ламината в Астане" class="w-full h-48 object-cover rounded-lg">
+              <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-after">После</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic mb-4">"Заменили старый пол на ламинат Vinart Classic. Доставка в Астану за 2 дня, установка прошла быстро и качественно!"</p>
+          <p class="font-semibold">Айгуль, Астана</p>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg shadow">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+            <div>
+              <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="До ремонта пола в Алматы" class="w-full h-48 object-cover rounded-lg">
+              <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-before">До</p>
+            </div>
+            <div>
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="После укладки SPC в Алматы" class="w-full h-48 object-cover rounded-lg">
+              <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-after">После</p>
+            </div>
+          </div>
+          <p class="text-gray-600 italic mb-4">"Установили SPC Vinart Stone в офисе в Алматы. Выглядит стильно, качество отличное, менеджеры помогли выбрать."</p>
+          <p class="font-semibold">Ерлан, Алматы</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="py-16 bg-gray-200">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="contact-title">Свяжитесь с нами</h2>
+      <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow">
+        <div class="space-y-4">
+          <div>
+            <label for="name" class="block text-gray-700" data-lang-key="form-name">Имя</label>
+            <input type="text" id="name" class="w-full px-4 py-2 border rounded-lg custom-focus-ring" required>
+          </div>
+          <div>
+            <label for="phone" class="block text-gray-700" data-lang-key="form-phone">Телефон</label>
+            <input type="tel" id="phone" class="w-full px-4 py-2 border rounded-lg custom-focus-ring" required>
+          </div>
+          <button id="submit-form" class="w-full custom-bg text-white px-4 py-2 rounded-lg custom-bg-hover" data-lang-key="form-submit">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">NaPol.kz</h3>
+          <p class="text-gray-400">Качественные напольные покрытия для дома и офиса. Алматы, Астана, Шымкент и весь Казахстан.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Контакты</h3>
+          <p class="text-gray-400">Тел: +7 (771) 234-56-78</p>
+          <p class="text-gray-400">Email: info@napol.kz</p>
+          <p class="text-gray-400">Адрес: ул. Абая 123, Алматы</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Социальные сети</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-[#2F855A]"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-[#2F855A]"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-[#2F855A]"><i class="fab fa-telegram text-xl"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-gray-400 mt-8">© 2025 NaPol.kz. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const translations = {
+      ru: {
+        'nav-catalog': 'Каталог',
+        'nav-brands': 'Бренды',
+        'nav-services': 'Услуги',
+        'nav-about': 'О нас',
+        'nav-contact': 'Контакты',
+        'hero-title': 'Пол, который вы полюбите с первого взгляда',
+        'hero-subtitle': 'Ламинат, SPC, паркет и ковры с доставкой по всему Казахстану. Выгодно. Удобно. В рассрочку.',
+        'hero-cta-primary': 'Выбрать покрытие',
+        'hero-cta-secondary': 'Получить консультацию',
+        'benefit-delivery': 'Бесплатная доставка от 100.000 ₸',
+        'benefit-selection': 'Помощь с подбором',
+        'benefit-payment': 'Оплата через Kaspi и Halyk',
+        'benefit-installment': 'Рассрочка без переплат',
+        'hero-calculate': 'Рассчитать стоимость',
+        'usp-title': 'Почему выбирают нас',
+        'usp-delivery-title': 'Бесплатная доставка',
+        'usp-delivery-text': 'По всему Казахстану при заказе от 100,000 KZT',
+        'usp-materials-title': 'Экологичные материалы',
+        'usp-materials-text': 'Сертификаты E0 и E1 для вашего здоровья',
+        'usp-measurement-title': 'Бесплатный замер',
+        'usp-measurement-text': 'С расчетом материалов в Алматы и Астане',
+        'catalog-title': 'Наш каталог',
+        'filter-all': 'Все',
+        'filter-laminate': 'Ламинат',
+        'filter-spc': 'SPC',
+        'filter-plinth': 'Плинтуса',
+        'filter-underlay': 'Подложки',
+        'add-to-cart': 'В корзину',
+        'filter-strength-label': 'Класс прочности',
+        'filter-brand-label': 'Бренд',
+        'filter-thickness-label': 'Толщина',
+        'filter-pattern-label': 'Узор',
+        'filter-na': 'Не применимо',
+        'filter-pattern-wood': 'Дерево',
+        'filter-pattern-stone': 'Камень',
+        'filter-pattern-solid': 'Однотонный',
+        'filter-pattern-white': 'Белый',
+        'filter-pattern-oak': 'Дуб',
+        'reset-filters': 'Сбросить',
+        'reviews-title': 'Отзывы наших клиентов',
+        'review-before': 'До',
+        'review-after': 'После',
+        'contact-title': 'Свяжитесь с нами',
+        'form-name': 'Имя',
+        'form-phone': 'Телефон',
+        'form-submit': 'Отправить',
+        'form-success': 'Спасибо, {name}! Мы свяжемся с вами по телефону {phone}.',
+        'form-error': 'Пожалуйста, заполните имя и телефон.',
+        'form-submit-error': 'Ошибка отправки данных. Попробуйте снова.'
+      },
+      kk: {
+        'nav-catalog': 'Каталог',
+        'nav-brands': 'Брендтер',
+        'nav-services': 'Қызметтер',
+        'nav-about': 'Біз туралы',
+        'nav-contact': 'Байланыстар',
+        'hero-title': 'Бірінші көзқарастан ұнататын еден',
+        'hero-subtitle': 'Ламинат, SPC, паркет және кілемдер, бүкіл Қазақстан бойынша жеткізумен. Тиімді. Ыңғайлы. Бөліп төлеумен.',
+        'hero-cta-primary': 'Еденді таңдау',
+        'hero-cta-secondary': 'Кеңес алу',
+        'benefit-delivery': '100.000 ₸-тан тегін жеткізу',
+        'benefit-selection': 'Таңдауға көмек',
+        'benefit-payment': 'Kaspi және Halyk арқылы төлем',
+        'benefit-installment': 'Пайызсыз бөліп төлеу',
+        'hero-calculate': 'Құнын есептеу',
+        'usp-title': 'Неліктен бізді таңдайды',
+        'usp-delivery-title': 'Тегін жеткізу',
+        'usp-delivery-text': '100,000 KZT-тен бастап тапсырыс бойынша бүкіл Қазақстан бойынша',
+        'usp-materials-title': 'Экологиялық материалдар',
+        'usp-materials-text': 'Сіздің денсаулығыңыз үшін E0 және E1 сертификаттары',
+        'usp-measurement-title': 'Тегін өлшеу',
+        'usp-measurement-text': 'Алматы мен Астанада материалдарды есептеумен',
+        'catalog-title': 'Біздің каталог',
+        'filter-all': 'Барлығы',
+        'filter-laminate': 'Ламинат',
+        'filter-spc': 'SPC',
+        'filter-plinth': 'Плинтустар',
+        'filter-underlay': 'Төсеніштер',
+        'add-to-cart': 'Себетке салу',
+        'filter-strength-label': 'Мықтылық класы',
+        'filter-brand-label': 'Бренд',
+        'filter-thickness-label': 'Қалыңдық',
+        'filter-pattern-label': 'Өрнек',
+        'filter-na': 'Қолданылмайды',
+        'filter-pattern-wood': 'Ағаш',
+        'filter-pattern-stone': 'Тас',
+        'filter-pattern-solid': 'Біртүсті',
+        'filter-pattern-white': 'Ақ',
+        'filter-pattern-oak': 'Емен',
+        'reset-filters': 'Қалпына келтіру',
+        'reviews-title': 'Біздің клиенттердің пікірлері',
+        'review-before': 'Ремонт алдында',
+        'review-after': 'Ремонттан кейін',
+        'contact-title': 'Бізбен байланысыңыз',
+        'form-name': 'Аты',
+        'form-phone': 'Телефон',
+        'form-submit': 'Жіберу',
+        'form-success': 'Рақмет, {name}! Біз сізге {phone} телефоны арқылы хабарласамыз.',
+        'form-error': 'Аты мен телефонды толтырыңыз.',
+        'form-submit-error': 'Деректерді жіберу қатесі. Қайтадан көріңіз.'
+      }
+    };
+
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const htmlLang = document.getElementById('html-lang');
+
+    function setLanguage(lang) {
+      localStorage.setItem('language', lang);
+      htmlLang.setAttribute('lang', lang === 'ru' ? 'ru' : 'kk');
+      document.querySelectorAll('[data-lang-key]').forEach(element => {
+        const key = element.getAttribute('data-lang-key');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+          element.style.textAlign = 'justify';
+        } else {
+          console.warn(`Translation for key "${key}" not found in language "${lang}"`);
+        }
+      });
+      langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.category-btn').forEach(btn => {
+        const key = btn.getAttribute('data-lang-key');
+        if (translations[lang][key]) {
+          btn.textContent = translations[lang][key];
+        }
+      });
+    }
+
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        setLanguage(lang);
+      });
+    });
+
+    const savedLang = localStorage.getItem('language') || 'ru';
+    setLanguage(savedLang);
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const categoryButtons = document.querySelectorAll('.category-btn');
+    const filterStrength = document.getElementById('filter-strength');
+    const filterBrand = document.getElementById('filter-brand');
+    const filterThickness = document.getElementById('filter-thickness');
+    const filterPattern = document.getElementById('filter-pattern');
+    const resetFilters = document.getElementById('reset-filters');
+    const productCards = document.querySelectorAll('.product-card');
+    let selectedCategory = 'all';
+
+    categoryButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        selectedCategory = button.getAttribute('data-category');
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        applyFilters();
+      });
+    });
+
+    function applyFilters() {
+      const category = selectedCategory;
+      const strength = filterStrength.value;
+      const brand = filterBrand.value;
+      const thickness = filterThickness.value;
+      const pattern = filterPattern.value;
+
+      productCards.forEach(card => {
+        const cardCategory = card.dataset.category;
+        const cardStrength = card.dataset.strengthClass;
+        const cardBrand = card.dataset.brand;
+        const cardThickness = card.dataset.thickness;
+        const cardPattern = card.dataset.pattern;
+
+        const categoryMatch = category === 'all' || cardCategory === category;
+        const strengthMatch = strength === 'all' || cardStrength === strength;
+        const brandMatch = brand === 'all' || cardBrand === brand;
+        const thicknessMatch = thickness === 'all' || cardThickness === thickness;
+        const patternMatch = pattern === 'all' || cardPattern === pattern;
+
+        if (categoryMatch && strengthMatch && brandMatch && thicknessMatch && patternMatch) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    filterStrength.addEventListener('change', applyFilters);
+    filterBrand.addEventListener('change', applyFilters);
+    filterThickness.addEventListener('change', applyFilters);
+    filterPattern.addEventListener('change', applyFilters);
+
+    resetFilters.addEventListener('click', () => {
+      selectedCategory = 'all';
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      document.querySelector('.category-btn[data-category="all"]').classList.add('active');
+      filterStrength.value = 'all';
+      filterBrand.value = 'all';
+      filterThickness.value = 'all';
+      filterPattern.value = 'all';
+      applyFilters();
+    });
+
+    const formButton = document.getElementById('submit-form');
+    formButton.addEventListener('click', () => {
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const currentLang = localStorage.getItem('language') || 'ru';
+
+      if (name && phone) {
+        const now = new Date();
+        const timestamp = now.toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' });
+
+        const formData = new URLSearchParams();
+        formData.append('name', name);
+        formData.append('phone', phone);
+        formData.append('timestamp', timestamp);
+
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyy4BY5fj3RFRtys0OV0CnjmZNlq7r8jmPSOhQ0LTk2IuNw11Bnu4v7SiUJSkIRaW4r/exec';
+
+        fetch(googleScriptUrl, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+          if (data === "Success") {
+            const successMessage = translations[currentLang]['form-success']
+              .replace('{name}', name)
+              .replace('{phone}', phone);
+            alert(successMessage);
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+          } else {
+            throw new Error(data);
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          const errorMessage = translations[currentLang]['form-submit-error'];
+          alert(errorMessage);
+        });
+      } else {
+        const errorMessage = translations[currentLang]['form-error'];
+        alert(errorMessage);
+      }
+    });
+  </script>
+</body>
+</html>
