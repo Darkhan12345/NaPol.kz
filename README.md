@@ -1,2 +1,0 @@
-# NaPol.kz
-NaPol.kz
