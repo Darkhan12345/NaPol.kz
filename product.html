@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru" id="html-lang">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" id="meta-description" content="Купить напольные покрытия в Казахстане.">
+  <meta name="keywords" content="ламинат Алматы, SPC Астана, плинтус Казахстан">
+  <meta property="og:title" id="og-title" content="NaPol.kz — Описание товара">
+  <meta property="og:description" id="og-description" content="Купить напольные покрытия в Казахстане.">
+  <meta property="og:image" id="og-image" content="">
+  <title id="meta-title">NaPol.kz — Описание товара</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .logo-placeholder {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      color: #2F855A;
+    }
+    .lang-btn {
+      padding: 0.2rem 0.5rem;
+      border: 1px solid #2F855A;
+      border-radius: 0.25rem;
+      color: #2F855A;
+      font-size: 0.75rem;
+      transition: all 0.2s;
+    }
+    .lang-btn.active, .lang-btn:hover {
+      background-color: #2F855A;
+      color: white;
+    }
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      color: #4B5563;
+      font-size: 0.75rem;
+      transition: color 0.2s;
+    }
+    .contact-info a:hover {
+      color: #2F855A;
+    }
+    .header-cta {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.75rem;
+      background-color: #2F855A;
+      color: white;
+      border-radius: 0.25rem;
+      transition: background-color 0.2s;
+    }
+    .header-cta:hover {
+      background-color: #1F6140;
+    }
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .custom-focus-ring:focus {
+      outline: none;
+      ring: 2px;
+      ring-color: #2F855A;
+    }
+    .custom-hover-text:hover {
+      color: #2F855A;
+    }
+    .price-text {
+      color: #2F855A;
+    }
+    .custom-bg {
+      background-color: #2F855A;
+    }
+    .custom-bg-hover:hover {
+      background-color: #1F6140;
+    }
+    @media (max-width: 640px) {
+      .contact-info {
+        display: none;
+      }
+      .nav-links {
+        display: none;
+      }
+      .header-cta {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.7rem;
+      }
+      .lang-btn {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.4rem;
+      }
+    }
+    @media (min-width: 641px) {
+      .mobile-menu-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="font-sans antialiased bg-gray-100">
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <nav class="container mx-auto px-4 py-3 header-container">
+      <a href="index.html" class="text-xl sm:text-2xl logo-placeholder">NaPol.kz</a>
+      <div class="nav-links hidden sm:flex space-x-4">
+        <a href="index.html#catalog" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-catalog">Каталог</a>
+        <a href="index.html#brands" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-brands">Бренды</a>
+        <a href="index.html#services" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-services">Услуги</a>
+        <a href="index.html#about" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-about">О нас</a>
+        <a href="index.html#contact" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-contact">Контакты</a>
+      </div>
+      <div class="flex items-center space-x-2 sm:space-x-3">
+        <div class="contact-info hidden sm:flex space-x-3">
+          <a href="mailto:info@napol.kz"><i class="fas fa-envelope mr-1 text-xs"></i><span>info@napol.kz</span></a>
+          <a href="tel:+77712345678"><i class="fas fa-phone-alt mr-1 text-xs"></i><span>+7 (771) 234-56-78</span></a>
+        </div>
+        <div class="flex space-x-1">
+          <button class="lang-btn active" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="kk">KZ</button>
+        </div>
+        <a href="https://wa.me/+77712345678" class="text-[#2F855A]"><i class="fab fa-whatsapp text-lg"></i></a>
+        <a href="index.html#contact" class="header-cta" data-lang-key="hero-calculate">Рассчитать стоимость</a>
+        <button id="menu-toggle" class="mobile-menu-toggle sm:hidden text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden sm:hidden bg-white shadow">
+      <div class="px-4 py-2 contact-info flex flex-col space-y-2">
+        <a href="mailto:info@napol.kz" class="text-gray-700"><i class="fas fa-envelope mr-1 text-xs"></i><span>info@napol.kz</span></a>
+        <a href="tel:+77712345678" class="text-gray-700"><i class="fas fa-phone-alt mr-1 text-xs"></i><span>+7 (771) 234-56-78</span></a>
+      </div>
+      <a href="index.html#catalog" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-catalog">Каталог</a>
+      <a href="index.html#brands" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-brands">Бренды</a>
+      <a href="index.html#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-services">Услуги</a>
+      <a href="index.html#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-about">О нас</a>
+      <a href="index.html#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-contact">Контакты</a>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container mx-auto px-4 py-4">
+    <nav class="text-gray-600 text-sm">
+      <a href="index.html" class="hover:text-[#2F855A]" data-lang-key="breadcrumb-home">Главная</a> >
+      <a id="breadcrumb-catalog" href="#" class="hover:text-[#2F855A]" data-lang-key="nav-catalog">Каталог</a> >
+      <span id="breadcrumb-product" class="text-gray-800"></span>
+    </nav>
+  </div>
+
+  <!-- Product Details Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div id="product-details" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div>
+          <img id="product-image" src="" alt="Товар" class="w-full h-96 object-cover rounded-lg">
+        </div>
+        <div>
+          <h1 id="product-title" class="text-3xl font-bold mb-4"></h1>
+          <p id="product-articul" class="text-gray-600 mb-2"><strong>Артикул:</strong> </p>
+          <p id="product-manufacturer" class="text-gray-600 mb-2"><strong>Производитель:</strong> </p>
+          <p id="product-description" class="text-gray-600 mb-4"></p>
+          <p id="product-price" class="price-text text-xl font-bold mb-4"></p>
+          <h2 class="text-lg font-semibold mb-2">Характеристики:</h2>
+          <ul class="text-gray-600 mb-4 list-disc list-inside">
+            <li id="product-category"></li>
+            <li id="product-size"></li>
+            <li id="product-pack-quantity"></li>
+            <li id="product-pack-weight"></li>
+            <li id="product-thickness"></li>
+            <li id="product-class"></li>
+            <li id="product-pattern"></li>
+          </ul>
+          <a href="#" class="block text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">NaPol.kz</h3>
+          <p class="text-gray-400">Качественные напольные покрытия для дома и офиса. Алматы, Астана, Шымкент и весь Казахстан.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Контакты</h3>
+          <p class="text-gray-400">Тел: +7 (771) 234-56-78</p>
+          <p class="text-gray-400">Email: info@napol.kz</p>
+          <p class="text-gray-400">Адрес: ул. Абая 123, Алматы</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Социальные сети</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-[#2F855A]"><i class="fab fa-instagram text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-[#2F855A]"><i class="fab fa-whatsapp text-xl"></i></a>
+            <a href="#" class="text-gray-400 hover:text-[#2F855A]"><i class="fab fa-telegram text-xl"></i></a>
+          </div>
+        </div>
+      </div>
+      <p class="text-center text-gray-400 mt-8">© 2025 NaPol.kz. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const translations = {
+      ru: {
+        'nav-catalog': 'Каталог',
+        'nav-brands': 'Бренды',
+        'nav-services': 'Услуги',
+        'nav-about': 'О нас',
+        'nav-contact': 'Контакты',
+        'hero-calculate': 'Рассчитать стоимость',
+        'add-to-cart': 'В корзину',
+        'breadcrumb-home': 'Главная'
+      },
+      kk: {
+        'nav-catalog': 'Каталог',
+        'nav-brands': 'Брендтер',
+        'nav-services': 'Қызметтер',
+        'nav-about': 'Біз туралы',
+        'nav-contact': 'Байланыстар',
+        'hero-calculate': 'Құнын есептеу',
+        'add-to-cart': 'Себетке салу',
+        'breadcrumb-home': 'Басты бет'
+      }
+    };
+
+    const langButtons = document.querySelectorAll('.lang-btn');
+    const htmlLang = document.getElementById('html-lang');
+
+    function setLanguage(lang) {
+      localStorage.setItem('language', lang);
+      htmlLang.setAttribute('lang', lang === 'ru' ? 'ru' : 'kk');
+      document.querySelectorAll('[data-lang-key]').forEach(element => {
+        const key = element.getAttribute('data-lang-key');
+        if (translations[lang][key]) {
+          element.textContent = translations[lang][key];
+          element.style.textAlign = 'justify';
+        }
+      });
+      langButtons.forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+    }
+
+    langButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        setLanguage(lang);
+      });
+    });
+
+    const savedLang = localStorage.getItem('language') || 'ru';
+    setLanguage(savedLang);
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Получаем артикул и категорию товара из URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const productArticul = urlParams.get('articul');
+    const productCategory = urlParams.get('category');
+
+    // URL вашего Google Apps Script Web App
+    const googleSheetApiUrl = 'https://script.google.com/macros/s/AKfycbzcXIf1nL377MNHgdA7muwz6diDrN9628TN_fJpcbTEwN5Fxf_nyYIqeMHqObzgmWKO/exec';
+
+    // Подгружаем данные из Google Таблицы
+    fetch(googleSheetApiUrl)
+      .then(response => response.json())
+      .then(products => {
+        // Находим товар по артикулу
+        const product = products.find(p => p['Артикул'] == productArticul);
+
+        // Если товар не найден, показываем сообщение об ошибке
+        if (!product) {
+          document.getElementById('product-details').innerHTML = '<p class="text-center text-gray-600">Товар не найден.</p>';
+        } else {
+          // Заполняем данные о товаре
+          document.getElementById('product-title').textContent = product['Наименование'];
+          document.getElementById('product-articul').innerHTML = `<strong>Артикул:</strong> ${product['Артикул']}`;
+          document.getElementById('product-manufacturer').innerHTML = `<strong>Производитель:</strong> ${product['Производитель']}`;
+          document.getElementById('product-description').textContent = product['Описание'];
+          document.getElementById('product-price').textContent = product['Цена'];
+          document.getElementById('product-category').textContent = `Категория: ${product['Категория']}`;
+          document.getElementById('product-size').textContent = `Размер: ${product['Размер']}`;
+          document.getElementById('product-pack-quantity').textContent = `В одной пачке: ${product['В одной пачке']}`;
+          document.getElementById('product-pack-weight').textContent = `Вес пачки: ${product['Вес пачки']}`;
+          document.getElementById('product-thickness').textContent = `Толщина: ${product['Толщина']}`;
+          document.getElementById('product-class').textContent = `Класс: ${product['Класс']}`;
+          document.getElementById('product-pattern').textContent = `Узор: ${product['Узор']}`;
+          document.getElementById('product-image').src = product['Image URL'];
+          document.getElementById('product-image').alt = product['Наименование'];
+
+          // Обновляем хлебные крошки
+          document.getElementById('breadcrumb-product').textContent = product['Наименование'];
+          const catalogLink = document.getElementById('breadcrumb-catalog');
+          catalogLink.href = `index.html#catalog?category=${encodeURIComponent(productCategory)}`;
+
+          // Обновляем мета-теги для SEO
+          const metaTitle = `NaPol.kz — ${product['Наименование']}`;
+          const metaDescription = `Купить ${product['Наименование']} от ${product['Производитель']} в Казахстане. Цена: ${product['Цена']}.`;
+          document.getElementById('meta-title').textContent = metaTitle;
+          document.getElementById('meta-description').setAttribute('content', metaDescription);
+
+          // Обновляем Open Graph теги
+          document.getElementById('og-title').setAttribute('content', metaTitle);
+          document.getElementById('og-description').setAttribute('content', metaDescription);
+          document.getElementById('og-image').setAttribute('content', product['Image URL']);
+        }
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке данных:', error);
+        document.getElementById('product-details').innerHTML = '<p class="text-center text-gray-600">Ошибка загрузки данных.</p>';
+      });
+  </script>
+</body>
+</html>
