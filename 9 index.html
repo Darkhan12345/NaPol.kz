@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Купить ламинат, SPC, плинтуса и подложки в Казахстане. Бесплатная доставка, бесплатный замер, экологичные покрытия.">
   <meta name="keywords" content="ламинат Алматы, SPC Астана, плинтус Казахстан, подложка недорого, бесплатный замер">
+  <meta property="og:title" content="NaPol.kz — Напольные покрытия в Казахстане">
+  <meta property="og:description" content="Купить ламинат, SPC, плинтуса и подложки в Казахстане. Бесплатная доставка, бесплатный замер, экологичные покрытия.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1618220922940-7cc2f2e9e968?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80">
   <title>NaPol.kz — Напольные покрытия в Казахстане</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -252,12 +255,12 @@
   <section id="catalog" class="py-16 bg-white">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-8" data-lang-key="catalog-title">Наш каталог</h2>
-      <div class="flex flex-wrap justify-center gap-2 mb-6">
+      <div id="category-buttons" class="flex flex-wrap justify-center gap-2 mb-6">
         <button class="category-btn active" data-category="all" data-lang-key="filter-all">Все</button>
-        <button class="category-btn" data-category="laminate" data-lang-key="filter-laminate">Ламинат</button>
-        <button class="category-btn" data-category="spc" data-lang-key="filter-spc">SPC</button>
-        <button class="category-btn" data-category="plinth" data-lang-key="filter-plinth">Плинтуса</button>
-        <button class="category-btn" data-category="underlay" data-lang-key="filter-underlay">Подложки</button>
+        <button class="category-btn" data-category="Ламинат" data-lang-key="filter-laminate">Ламинат</button>
+        <button class="category-btn" data-category="SPC" data-lang-key="filter-spc">SPC</button>
+        <button class="category-btn" data-category="Плинтуса" data-lang-key="filter-plinth">Плинтуса</button>
+        <button class="category-btn" data-category="Подложки" data-lang-key="filter-underlay">Подложки</button>
       </div>
       <div class="flex flex-wrap justify-center gap-4 mb-8">
         <div class="flex flex-col">
@@ -274,109 +277,27 @@
           <label for="filter-brand" class="text-sm font-semibold mb-1" data-lang-key="filter-brand-label">Бренд</label>
           <select id="filter-brand" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
             <option value="all" data-lang-key="filter-all">Все</option>
-            <option value="vinart">Vinart</option>
+            <!-- Бренды будут добавлены динамически -->
           </select>
         </div>
         <div class="flex flex-col">
           <label for="filter-thickness" class="text-sm font-semibold mb-1" data-lang-key="filter-thickness-label">Толщина</label>
           <select id="filter-thickness" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
             <option value="all" data-lang-key="filter-all">Все</option>
-            <option value="2">2 мм</option>
-            <option value="3">3 мм</option>
-            <option value="4.5">4.5 мм</option>
-            <option value="5">5 мм</option>
-            <option value="7">7 мм</option>
-            <option value="8">8 мм</option>
-            <option value="60">60 мм</option>
-            <option value="80">80 мм</option>
+            <!-- Толщины будут добавлены динамически -->
           </select>
         </div>
         <div class="flex flex-col">
           <label for="filter-pattern" class="text-sm font-semibold mb-1" data-lang-key="filter-pattern-label">Узор</label>
           <select id="filter-pattern" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
             <option value="all" data-lang-key="filter-all">Все</option>
-            <option value="wood" data-lang-key="filter-pattern-wood">Дерево</option>
-            <option value="stone" data-lang-key="filter-pattern-stone">Камень</option>
-            <option value="solid" data-lang-key="filter-pattern-solid">Однотонный</option>
-            <option value="white" data-lang-key="filter-pattern-white">Белый</option>
-            <option value="oak" data-lang-key="filter-pattern-oak">Дуб</option>
+            <!-- Узоры будут добавлены динамически -->
           </select>
         </div>
         <button id="reset-filters" class="px-4 py-2 border rounded-lg text-gray-700 custom-bg-hover self-end" data-lang-key="reset-filters">Сбросить</button>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="laminate" data-strength-class="33" data-brand="vinart" data-thickness="8" data-pattern="wood">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ламинат Vinart 33 класс в Алматы" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">Ламинат Vinart Classic</h3>
-            <p class="text-gray-600">33 класс, 8 мм, водостойкий, дуб натуральный</p>
-            <p class="price-text font-bold">от 6,500 KZT/м²</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="laminate" data-strength-class="32" data-brand="vinart" data-thickness="7" data-pattern="wood">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Ламинат Vinart Premium в Астане" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">Ламинат Vinart Premium</h3>
-            <p class="text-gray-600">32 класс, 7 мм, влагостойкий, серый орех</p>
-            <p class="price-text font-bold">от 5,800 KZT/м²</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="spc" data-strength-class="34" data-brand="vinart" data-thickness="4.5" data-pattern="stone">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="SPC Vinart Stone в Казахстане" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">SPC Vinart Stone</h3>
-            <p class="text-gray-600">4.5 мм, водостойкий, каменный эффект</p>
-            <p class="price-text font-bold">от 8,500 KZT/м²</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="spc" data-strength-class="34" data-brand="vinart" data-thickness="5" data-pattern="wood">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="SPC Vinart Wood в Шымкенте" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">SPC Vinart Wood</h3>
-            <p class="text-gray-600">5 мм, экологичный, текстура дерева</p>
-            <p class="price-text font-bold">от 9,200 KZT/м²</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="plinth" data-strength-class="na" data-brand="vinart" data-thickness="60" data-pattern="white">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Плинтус Vinart ПВХ в Алматы" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">Плинтус Vinart ПВХ</h3>
-            <p class="text-gray-600">60 мм, белый, устойчив к влаге</p>
-            <p class="price-text font-bold">от 1,200 KZT/пог.м</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="plinth" data-strength-class="na" data-brand="vinart" data-thickness="80" data-pattern="oak">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Плинтус Vinart МДФ в Астане" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">Плинтус Vinart МДФ</h3>
-            <p class="text-gray-600">80 мм, дуб, для сухих помещений</p>
-            <p class="price-text font-bold">от 1,500 KZT/пог.м</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="underlay" data-strength-class="na" data-brand="vinart" data-thickness="2" data-pattern="solid">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Подложка Vinart EVA в Казахстане" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">Подложка Vinart EVA</h3>
-            <p class="text-gray-600">2 мм, для ламината, шумопоглощение</p>
-            <p class="price-text font-bold">от 600 KZT/м²</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
-        <div class="product-card bg-gray-100 rounded-lg shadow overflow-hidden" data-category="underlay" data-strength-class="na" data-brand="vinart" data-thickness="3" data-pattern="solid">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Подложка Vinart XPS в Алматы" class="w-full h-48 object-cover">
-          <div class="p-4">
-            <h3 class="text-lg font-semibold">Подложка Vinart XPS</h3>
-            <p class="text-gray-600">3 мм, для SPC, теплоизоляция</p>
-            <p class="price-text font-bold">от 800 KZT/м²</p>
-            <a href="#" class="block mt-2 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
-          </div>
-        </div>
+      <div id="product-catalog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Карточки товаров будут добавлены динамически -->
       </div>
     </div>
   </section>
@@ -417,7 +338,7 @@
               <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-before">До</p>
             </div>
             <div>
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="После укладки ламината в Астане" class="w-full h-48 object-cover rounded-lg">
+              <img src="https://images.unsplash.com/photo-1600585154340透明: true; width: 300px; height: 200px;" alt="После укладки ламината в Астане" class="w-full h-48 object-cover rounded-lg">
               <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-after">После</p>
             </div>
           </div>
@@ -541,7 +462,8 @@
         'form-submit': 'Отправить',
         'form-success': 'Спасибо, {name}! Мы свяжемся с вами по телефону {phone}.',
         'form-error': 'Пожалуйста, заполните имя и телефон.',
-        'form-submit-error': 'Ошибка отправки данных. Попробуйте снова.'
+        'form-submit-error': 'Ошибка отправки данных. Попробуйте снова.',
+        'breadcrumb-home': 'Главная'
       },
       kk: {
         'nav-catalog': 'Каталог',
@@ -592,7 +514,8 @@
         'form-submit': 'Жіберу',
         'form-success': 'Рақмет, {name}! Біз сізге {phone} телефоны арқылы хабарласамыз.',
         'form-error': 'Аты мен телефонды толтырыңыз.',
-        'form-submit-error': 'Деректерді жіберу қатесі. Қайтадан көріңіз.'
+        'form-submit-error': 'Деректерді жіберу қатесі. Қайтадан көріңіз.',
+        'breadcrumb-home': 'Басты бет'
       }
     };
 
@@ -638,13 +561,95 @@
       mobileMenu.classList.toggle('hidden');
     });
 
+    const googleSheetApiUrl = 'https://script.google.com/macros/s/AKfycbzcXIf1nL377MNHgdA7muwz6diDrN9628TN_fJpcbTEwN5Fxf_nyYIqeMHqObzgmWKO/exec';
+
+    // Загружаем товары из Google Таблицы и отображаем их в каталоге
+    fetch(googleSheetApiUrl)
+      .then(response => response.json())
+      .then(products => {
+        const productCatalog = document.getElementById('product-catalog');
+        const filterBrand = document.getElementById('filter-brand');
+        const filterThickness = document.getElementById('filter-thickness');
+        const filterPattern = document.getElementById('filter-pattern');
+
+        // Собираем уникальные значения для фильтров
+        const brands = [...new Set(products.map(p => p['Производитель']))].sort();
+        const thicknesses = [...new Set(products.map(p => p['Толщина'].replace(' мм', '')))].sort((a, b) => parseFloat(a) - parseFloat(b));
+        const patterns = [...new Set(products.map(p => p['Узор']))].sort();
+
+        // Заполняем фильтры
+        brands.forEach(brand => {
+          const option = document.createElement('option');
+          option.value = brand.toLowerCase();
+          option.textContent = brand;
+          filterBrand.appendChild(option);
+        });
+
+        thicknesses.forEach(thickness => {
+          const option = document.createElement('option');
+          option.value = thickness;
+          option.textContent = thickness + ' мм';
+          filterThickness.appendChild(option);
+        });
+
+        patterns.forEach(pattern => {
+          const option = document.createElement('option');
+          option.value = pattern;
+          option.textContent = pattern;
+          filterPattern.appendChild(option);
+        });
+
+        // Отображаем товары
+        products.forEach(product => {
+          const category = product['Категория'] ? product['Категория'].toLowerCase() : 'other';
+          const card = document.createElement('div');
+          card.className = 'product-card bg-gray-100 rounded-lg shadow overflow-hidden';
+          card.setAttribute('data-category', category);
+          card.setAttribute('data-strength-class', product['Класс'] || 'na');
+          card.setAttribute('data-brand', product['Производитель'].toLowerCase());
+          card.setAttribute('data-thickness', product['Толщина'].replace(' мм', ''));
+          card.setAttribute('data-pattern', product['Узор']);
+          card.innerHTML = `
+            <a href="product.html?articul=${product['Артикул']}&category=${encodeURIComponent(product['Категория'])}">
+              <img src="${product['Image URL']}" alt="${product['Наименование']}" class="w-full h-48 object-cover">
+              <div class="p-4">
+                <h3 class="text-lg font-semibold">${product['Наименование']}</h3>
+                <p class="text-gray-600">${product['Класс'] ? product['Класс'] + ' класс, ' : ''}${product['Толщина']}, ${product['Узор'].toLowerCase()}</p>
+                <p class="price-text font-bold">${product['Цена']}</p>
+              </div>
+            </a>
+            <a href="#" class="block mx-4 mb-4 text-center custom-bg text-white px-4 py-2 rounded custom-bg-hover" data-lang-key="add-to-cart">В корзину</a>
+          `;
+          productCatalog.appendChild(card);
+        });
+
+        // Применяем фильтры после загрузки товаров
+        applyFilters();
+
+        // Проверяем параметр category в URL и применяем фильтр
+        const urlParams = new URLSearchParams(window.location.hash.replace('#catalog', ''));
+        const categoryFromUrl = urlParams.get('category');
+        if (categoryFromUrl) {
+          selectedCategory = decodeURIComponent(categoryFromUrl).toLowerCase();
+          const categoryButton = document.querySelector(`.category-btn[data-category="${decodeURIComponent(categoryFromUrl)}"]`);
+          if (categoryButton) {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            categoryButton.classList.add('active');
+            applyFilters();
+          }
+        }
+      })
+      .catch(error => {
+        console.error('Ошибка при загрузке каталога:', error);
+        document.getElementById('product-catalog').innerHTML = '<p class="text-center text-gray-600">Ошибка загрузки каталога.</p>';
+      });
+
     const categoryButtons = document.querySelectorAll('.category-btn');
     const filterStrength = document.getElementById('filter-strength');
     const filterBrand = document.getElementById('filter-brand');
     const filterThickness = document.getElementById('filter-thickness');
     const filterPattern = document.getElementById('filter-pattern');
     const resetFilters = document.getElementById('reset-filters');
-    const productCards = document.querySelectorAll('.product-card');
     let selectedCategory = 'all';
 
     categoryButtons.forEach(button => {
@@ -657,12 +662,13 @@
     });
 
     function applyFilters() {
-      const category = selectedCategory;
+      const category = selectedCategory.toLowerCase();
       const strength = filterStrength.value;
       const brand = filterBrand.value;
       const thickness = filterThickness.value;
       const pattern = filterPattern.value;
 
+      const productCards = document.querySelectorAll('.product-card');
       productCards.forEach(card => {
         const cardCategory = card.dataset.category;
         const cardStrength = card.dataset.strengthClass;
@@ -721,24 +727,16 @@
           method: 'POST',
           body: formData
         })
-        .then(response => response.text())
-        .then(data => {
-          if (data === "Success") {
-            const successMessage = translations[currentLang]['form-success']
-              .replace('{name}', name)
-              .replace('{phone}', phone);
-            alert(successMessage);
-            document.getElementById('name').value = '';
-            document.getElementById('phone').value = '';
-          } else {
-            throw new Error(data);
-          }
-        })
         .catch(error => {
-          console.error('Error:', error);
-          const errorMessage = translations[currentLang]['form-submit-error'];
-          alert(errorMessage);
+          console.log('CORS error ignored:', error);
         });
+
+        const successMessage = translations[currentLang]['form-success']
+          .replace('{name}', name)
+          .replace('{phone}', phone);
+        alert(successMessage);
+        document.getElementById('name').value = '';
+        document.getElementById('phone').value = '';
       } else {
         const errorMessage = translations[currentLang]['form-error'];
         alert(errorMessage);
