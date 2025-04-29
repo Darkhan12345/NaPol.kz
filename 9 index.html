@@ -48,12 +48,13 @@
       color: #2F855A;
     }
     .header-cta {
-      padding: 0.4rem 0.8rem;
-      font-size: 0.75rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.875rem;
       background-color: #2F855A;
       color: white;
       border-radius: 0.25rem;
       transition: background-color 0.2s;
+      font-weight: 600;
     }
     .header-cta:hover {
       background-color: #1F6140;
@@ -107,7 +108,7 @@
       margin-top: 0.5rem;
     }
     .hero-cta-primary {
-      background-color: #F97316;
+      background-color: #2F855A;
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 9999px;
@@ -115,7 +116,7 @@
       transition: background-color 0.2s;
     }
     .hero-cta-primary:hover {
-      background-color: #EA580C;
+      background-color: #1F6140;
     }
     .hero-cta-secondary {
       background-color: white;
@@ -141,6 +142,43 @@
       margin-right: 0.5rem;
       color: #1E3A8A;
     }
+    .benefits-container {
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      padding: 1rem;
+      border-radius: 0.5rem;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.5rem;
+      max-width: 500px;
+      width: 90%;
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #4B5563;
+    }
+    .modal-close:hover {
+      color: #2F855A;
+    }
     @media (max-width: 640px) {
       .hero-bg {
         min-height: 400px;
@@ -165,8 +203,8 @@
         display: none;
       }
       .header-cta {
-        padding: 0.3rem 0.6rem;
-        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
       }
       .lang-btn {
         font-size: 0.7rem;
@@ -191,10 +229,9 @@
       <a href="/" class="text-xl sm:text-2xl logo-placeholder">NaPol.kz</a>
       <div class="nav-links hidden sm:flex space-x-4">
         <a href="#catalog" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-catalog">Каталог</a>
-        <a href="#brands" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-brands">Бренды</a>
-        <a href="#services" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-services">Услуги</a>
-        <a href="#about" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-about">О нас</a>
-        <a href="#contact" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-contact">Контакты</a>
+        <a href="#catalog" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-brands">Бренды</a>
+        <a href="#footer" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-about">О нас</a>
+        <a href="#footer" class="text-gray-700 custom-hover-text text-sm" data-lang-key="nav-contact">Контакты</a>
       </div>
       <div class="flex items-center space-x-2 sm:space-x-3">
         <div class="contact-info hidden sm:flex space-x-3">
@@ -206,7 +243,7 @@
           <button class="lang-btn" data-lang="kk">KZ</button>
         </div>
         <a href="https://wa.me/+77712345678" class="text-[#2F855A]"><i class="fab fa-whatsapp text-lg"></i></a>
-        <a href="#contact" class="header-cta" data-lang-key="hero-calculate">Рассчитать стоимость</a>
+        <button id="open-modal" class="header-cta" data-lang-key="hero-calculate">Рассчитать стоимость</button>
         <button id="menu-toggle" class="mobile-menu-toggle sm:hidden text-gray-700 focus:outline-none">
           <i class="fas fa-bars text-xl"></i>
         </button>
@@ -218,12 +255,30 @@
         <a href="tel:+77712345678" class="text-gray-700"><i class="fas fa-phone-alt mr-1 text-xs"></i><span>+7 (771) 234-56-78</span></a>
       </div>
       <a href="#catalog" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-catalog">Каталог</a>
-      <a href="#brands" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-brands">Бренды</a>
-      <a href="#services" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-services">Услуги</a>
-      <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-about">О нас</a>
-      <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-contact">Контакты</a>
+      <a href="#catalog" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-brands">Бренды</a>
+      <a href="#footer" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-about">О нас</a>
+      <a href="#footer" class="block px-4 py-2 text-gray-700 hover:bg-gray-100" data-lang-key="nav-contact">Контакты</a>
     </div>
   </header>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">×</span>
+      <h2 class="text-2xl font-bold mb-4" data-lang-key="contact-title">Свяжитесь с нами</h2>
+      <div class="space-y-4">
+        <div>
+          <label for="modal-name" class="block text-gray-700" data-lang-key="form-name">Имя</label>
+          <input type="text" id="modal-name" class="w-full px-4 py-2 border rounded-lg custom-focus-ring" required>
+        </div>
+        <div>
+          <label for="modal-phone" class="block text-gray-700" data-lang-key="form-phone">Телефон</label>
+          <input type="tel" id="modal-phone" class="w-full px-4 py-2 border rounded-lg custom-focus-ring" required>
+        </div>
+        <button id="modal-submit" class="w-full custom-bg text-white px-4 py-2 rounded-lg custom-bg-hover" data-lang-key="form-submit">Отправить</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Section -->
   <section class="hero-bg py-12">
@@ -232,20 +287,17 @@
       <p class="hero-subtitle mb-6" data-lang-key="hero-subtitle">Ламинат, SPC, паркет и ковры с доставкой по всему Казахстану. Выгодно. Удобно. В рассрочку.</p>
       <div class="flex space-x-4 mb-6">
         <a href="#catalog" class="hero-cta-primary" data-lang-key="hero-cta-primary">Выбрать покрытие</a>
-        <a href="#contact" class="hero-cta-secondary" data-lang-key="hero-cta-secondary">Получить консультацию</a>
+        <a href="#footer" class="hero-cta-secondary" data-lang-key="hero-cta-secondary">Получить консультацию</a>
       </div>
-      <div class="space-y-2">
+      <div class="benefits-container space-y-2">
         <div class="benefit-item" data-lang-key="benefit-delivery">
           <i class="fas fa-truck"></i> Бесплатная доставка от 100.000 ₸
         </div>
         <div class="benefit-item" data-lang-key="benefit-selection">
-          <i class="fas fa-hand-pointer"></i> Помощь с подбором
+          <i class="fas fa-hand-pointer"></i> Помощь с подбором и замером
         </div>
         <div class="benefit-item" data-lang-key="benefit-payment">
           <i class="fas fa-credit-card"></i> Оплата через Kaspi и Halyk
-        </div>
-        <div class="benefit-item" data-lang-key="benefit-installment">
-          <i class="fas fa-star"></i> Рассрочка без переплат
         </div>
       </div>
     </div>
@@ -277,28 +329,23 @@
           <label for="filter-brand" class="text-sm font-semibold mb-1" data-lang-key="filter-brand-label">Бренд</label>
           <select id="filter-brand" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
             <option value="all" data-lang-key="filter-all">Все</option>
-            <!-- Бренды будут добавлены динамически -->
           </select>
         </div>
         <div class="flex flex-col">
           <label for="filter-thickness" class="text-sm font-semibold mb-1" data-lang-key="filter-thickness-label">Толщина</label>
           <select id="filter-thickness" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
             <option value="all" data-lang-key="filter-all">Все</option>
-            <!-- Толщины будут добавлены динамически -->
           </select>
         </div>
         <div class="flex flex-col">
           <label for="filter-pattern" class="text-sm font-semibold mb-1" data-lang-key="filter-pattern-label">Узор</label>
           <select id="filter-pattern" class="px-4 py-2 border rounded-lg text-gray-700 custom-focus-ring">
             <option value="all" data-lang-key="filter-all">Все</option>
-            <!-- Узоры будут добавлены динамически -->
           </select>
         </div>
         <button id="reset-filters" class="px-4 py-2 border rounded-lg text-gray-700 custom-bg-hover self-end" data-lang-key="reset-filters">Сбросить</button>
       </div>
-      <div id="product-catalog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <!-- Карточки товаров будут добавлены динамически -->
-      </div>
+      <div id="product-catalog" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
     </div>
   </section>
 
@@ -338,7 +385,7 @@
               <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-before">До</p>
             </div>
             <div>
-              <img src="https://images.unsplash.com/photo-1600585154340透明: true; width: 300px; height: 200px;" alt="После укладки ламината в Астане" class="w-full h-48 object-cover rounded-lg">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="После укладки ламината в Астане" class="w-full h-48 object-cover rounded-lg">
               <p class="text-center text-sm font-semibold mt-2" data-lang-key="review-after">После</p>
             </div>
           </div>
@@ -384,7 +431,7 @@
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
+  <footer id="footer" class="bg-gray-800 text-white py-8">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
@@ -416,7 +463,6 @@
       ru: {
         'nav-catalog': 'Каталог',
         'nav-brands': 'Бренды',
-        'nav-services': 'Услуги',
         'nav-about': 'О нас',
         'nav-contact': 'Контакты',
         'hero-title': 'Пол, который вы полюбите с первого взгляда',
@@ -424,9 +470,8 @@
         'hero-cta-primary': 'Выбрать покрытие',
         'hero-cta-secondary': 'Получить консультацию',
         'benefit-delivery': 'Бесплатная доставка от 100.000 ₸',
-        'benefit-selection': 'Помощь с подбором',
+        'benefit-selection': 'Помощь с подбором и замером',
         'benefit-payment': 'Оплата через Kaspi и Halyk',
-        'benefit-installment': 'Рассрочка без переплат',
         'hero-calculate': 'Рассчитать стоимость',
         'usp-title': 'Почему выбирают нас',
         'usp-delivery-title': 'Бесплатная доставка',
@@ -468,7 +513,6 @@
       kk: {
         'nav-catalog': 'Каталог',
         'nav-brands': 'Брендтер',
-        'nav-services': 'Қызметтер',
         'nav-about': 'Біз туралы',
         'nav-contact': 'Байланыстар',
         'hero-title': 'Бірінші көзқарастан ұнататын еден',
@@ -476,9 +520,8 @@
         'hero-cta-primary': 'Еденді таңдау',
         'hero-cta-secondary': 'Кеңес алу',
         'benefit-delivery': '100.000 ₸-тан тегін жеткізу',
-        'benefit-selection': 'Таңдауға көмек',
+        'benefit-selection': 'Таңдауға және өлшеуге көмек',
         'benefit-payment': 'Kaspi және Halyk арқылы төлем',
-        'benefit-installment': 'Пайызсыз бөліп төлеу',
         'hero-calculate': 'Құнын есептеу',
         'usp-title': 'Неліктен бізді таңдайды',
         'usp-delivery-title': 'Тегін жеткізу',
@@ -561,9 +604,76 @@
       mobileMenu.classList.toggle('hidden');
     });
 
+    // Modal functionality
+    const modal = document.getElementById('modal');
+    const openModalBtn = document.getElementById('open-modal');
+    const closeModalBtn = document.querySelector('.modal-close');
+    const modalSubmitBtn = document.getElementById('modal-submit');
+
+    openModalBtn.addEventListener('click', () => {
+      modal.style.display = 'flex';
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    modalSubmitBtn.addEventListener('click', () => {
+      const name = document.getElementById('modal-name').value;
+      const phone = document.getElementById('modal-phone').value;
+      const currentLang = localStorage.getItem('language') || 'ru';
+
+      if (name && phone) {
+        const now = new Date();
+        const timestamp = now.toLocaleString('ru-RU', { timeZone: 'Asia/Almaty' });
+
+        const formData = new URLSearchParams();
+        formData.append('name', name);
+        formData.append('phone', phone);
+        formData.append('timestamp', timestamp);
+
+        const googleScriptUrl = 'https://script.google.com/macros/s/AKfycbyy4BY5fj3RFRtys0OV0CnjmZNlq7r8jmPSOhQ0LTk2IuNw11Bnu4v7SiUJSkIRaW4r/exec';
+
+        fetch(googleScriptUrl, {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (response.ok) {
+            const successMessage = translations[currentLang]['form-success']
+              .replace('{name}', name)
+              .replace('{phone}', phone);
+            alert(successMessage);
+            document.getElementById('modal-name').value = '';
+            document.getElementById('modal-phone').value = '';
+            modal.style.display = 'none';
+          } else {
+            alert(translations[currentLang]['form-submit-error']);
+          }
+        })
+        .catch(error => {
+          console.log('CORS error ignored:', error);
+          const successMessage = translations[currentLang]['form-success']
+            .replace('{name}', name)
+            .replace('{phone}', phone);
+          alert(successMessage);
+          document.getElementById('modal-name').value = '';
+          document.getElementById('modal-phone').value = '';
+          modal.style.display = 'none';
+        });
+      } else {
+        alert(translations[currentLang]['form-error']);
+      }
+    });
+
     const googleSheetApiUrl = 'https://script.google.com/macros/s/AKfycbzcXIf1nL377MNHgdA7muwz6diDrN9628TN_fJpcbTEwN5Fxf_nyYIqeMHqObzgmWKO/exec';
 
-    // Загружаем товары из Google Таблицы и отображаем их в каталоге
     fetch(googleSheetApiUrl)
       .then(response => response.json())
       .then(products => {
@@ -572,12 +682,10 @@
         const filterThickness = document.getElementById('filter-thickness');
         const filterPattern = document.getElementById('filter-pattern');
 
-        // Собираем уникальные значения для фильтров
         const brands = [...new Set(products.map(p => p['Производитель']))].sort();
         const thicknesses = [...new Set(products.map(p => p['Толщина'].replace(' мм', '')))].sort((a, b) => parseFloat(a) - parseFloat(b));
         const patterns = [...new Set(products.map(p => p['Узор']))].sort();
 
-        // Заполняем фильтры
         brands.forEach(brand => {
           const option = document.createElement('option');
           option.value = brand.toLowerCase();
@@ -599,7 +707,6 @@
           filterPattern.appendChild(option);
         });
 
-        // Отображаем товары
         products.forEach(product => {
           const category = product['Категория'] ? product['Категория'].toLowerCase() : 'other';
           const card = document.createElement('div');
@@ -623,10 +730,8 @@
           productCatalog.appendChild(card);
         });
 
-        // Применяем фильтры после загрузки товаров
         applyFilters();
 
-        // Проверяем параметр category в URL и применяем фильтр
         const urlParams = new URLSearchParams(window.location.hash.replace('#catalog', ''));
         const categoryFromUrl = urlParams.get('category');
         if (categoryFromUrl) {
@@ -641,7 +746,7 @@
       })
       .catch(error => {
         console.error('Ошибка при загрузке каталога:', error);
-        document.getElementById('product-catalog').innerHTML = '<p class="text-center text-gray-600">Ошибка загрузки каталога.</p>';
+        document.getElementById('product-catalog').innerHTML = '<p class="text-center text-gray-600">Ошибка загрузки каталога. Попробуйте позже.</p>';
       });
 
     const categoryButtons = document.querySelectorAll('.category-btn');
@@ -727,19 +832,29 @@
           method: 'POST',
           body: formData
         })
+        .then(response => {
+          if (response.ok) {
+            const successMessage = translations[currentLang]['form-success']
+              .replace('{name}', name)
+              .replace('{phone}', phone);
+            alert(successMessage);
+            document.getElementById('name').value = '';
+            document.getElementById('phone').value = '';
+          } else {
+            alert(translations[currentLang]['form-submit-error']);
+          }
+        })
         .catch(error => {
           console.log('CORS error ignored:', error);
+          const successMessage = translations[currentLang]['form-success']
+            .replace('{name}', name)
+            .replace('{phone}', phone);
+          alert(successMessage);
+          document.getElementById('name').value = '';
+          document.getElementById('phone').value = '';
         });
-
-        const successMessage = translations[currentLang]['form-success']
-          .replace('{name}', name)
-          .replace('{phone}', phone);
-        alert(successMessage);
-        document.getElementById('name').value = '';
-        document.getElementById('phone').value = '';
       } else {
-        const errorMessage = translations[currentLang]['form-error'];
-        alert(errorMessage);
+        alert(translations[currentLang]['form-error']);
       }
     });
   </script>
